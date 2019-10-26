@@ -89,7 +89,8 @@ namespace DatingApp.API.Controllers
             var token = tokenhandler.CreateToken(tokenDescriptor);
 
             //write the token to response and send back to client
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenhandler.WriteToken(token)
             });
         }
