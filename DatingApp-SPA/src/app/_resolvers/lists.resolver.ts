@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators';
 export class ListsResolver implements Resolve<User[]> {
     pageNumber = 1;
     pageSize = 5;
-    likesParam = 'Likers'
+    likesParam = 'Likers';
     constructor(private userservice: UserService, private router: Router, private alertify: AlertifyService ) { }
     resolve(route: ActivatedRouteSnapshot): Observable<User[]> {
         return this.userservice.getUsers(this.pageNumber, this.pageSize, null, this.likesParam).pipe(
