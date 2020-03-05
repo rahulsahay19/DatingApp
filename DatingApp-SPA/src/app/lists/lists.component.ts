@@ -44,5 +44,4 @@ export class ListsComponent implements OnInit {
       this.alertify.error(error);
     });
   }
-
 }
